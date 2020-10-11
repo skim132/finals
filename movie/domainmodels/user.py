@@ -55,6 +55,9 @@ class User:
         if review not in self.reviews:
             self._review_list.append(review)
 
+    def remove_review(self, review):
+        self._review_list.remove(review)
+
     def to_dict(self):
         return {
             'username': self.username,
